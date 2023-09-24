@@ -30,3 +30,10 @@ class FileStorage:
         with open(FileStorage.__file_path, "r", encoding="utf-8") as f:
             obj_dict = json.load(f)
             FileStorage.__objects = obj_dict
+    def classes(self):
+        """Returns a dictionary of valid classes and their references"""
+        from models.bas_model import BaseModel
+        classes = {
+        "BaseModel" : Basemodel}
+        return classes
+        
